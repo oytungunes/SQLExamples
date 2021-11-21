@@ -83,14 +83,62 @@ The following SQL statement selects all the customers from the country "Mexico",
 SELECT * FROM Customers
 WHERE Country='Mexico';
 
+# Text Fields vs. Numeric Fields
+SQL requires single quotes around text values (most database systems will also allow double quotes).
+
+However, numeric fields should not be enclosed in quotes:
+
+SELECT * FROM Customers
+WHERE CustomerID=1;
+
+Operator	Description	Example
+=	Equal	
+>	Greater than	
+<	Less than	
+>=	Greater than or equal	
+<=	Less than or equal	
+<>	Not equal. Note: In some versions of SQL this operator may be written as !=	
+BETWEEN	Between a certain range	
+LIKE	Search for a pattern	
+IN	To specify multiple possible values for a column
 
 
+#  The SQL AND, OR and NOT Operators
 
 
+The following SQL statement selects all fields from "Customers" where country is "Germany" AND city is "Berlin":
+
+SELECT * FROM Customers
+WHERE Country='Germany' AND City='Berlin';
+
+The following SQL statement selects all fields from "Customers" where city is "Berlin" OR "München":
+
+SELECT * FROM Customers
+WHERE City='Berlin' OR City='München';
+
+The following SQL statement selects all fields from "Customers" where country is NOT "Germany" and NOT "USA":
+
+SELECT * FROM Customers
+WHERE NOT Country='Germany' AND NOT Country='USA';
+
+#   The SQL ORDER BY Keyword
+
+The following SQL statement selects all customers from the "Customers" table, sorted by the "Country" column:
 
 
+SELECT * FROM Customers
+ORDER BY Country;
 
 
+The following SQL statement selects all customers from the "Customers" table, sorted DESCENDING by the "Country" column:
+
+SELECT * FROM Customers
+ORDER BY Country DESC;
+
+The following SQL statement selects all customers from the "Customers" table, sorted by the "Country" and the "CustomerName" column. This means that it orders by Country, but if some rows have the same Country, it orders them by CustomerName:
+
+SELECT * FROM Customers
+ORDER BY Country, CustomerName;
 
 
 
