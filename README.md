@@ -140,11 +140,17 @@ The following SQL statement selects all customers from the "Customers" table, so
 SELECT * FROM Customers
 ORDER BY Country, CustomerName;
 
+The following SQL statement selects all customers from the "Customers" table, sorted ascending by the "Country" and descending by the "CustomerName" column:
+
+SELECT * FROM Customers
+ORDER BY Country ASC, CustomerName DESC;
 
 
 
+#   The SQL INSERT INTO Statement
 
-
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
 
 
 
