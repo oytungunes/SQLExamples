@@ -52,7 +52,7 @@ DROP INDEX - deletes an index
 
 The following SQL statement selects all the records in the "Customers" table:
 
-# SELECT - and SELECT and DISTINCT
+# SELECT and DISTINCT
 
 
 SELECT * FROM Customers; 
@@ -76,6 +76,7 @@ The following SQL statement lists the number of different (distinct) customer co
 
 SELECT COUNT(DISTINCT Country) FROM Customers;
 
+# WHERE STATEMENTS
 
 The following SQL statement selects all the customers from the country "Mexico", in the "Customers" table:
 
