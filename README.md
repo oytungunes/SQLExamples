@@ -175,6 +175,45 @@ SELECT CustomerName, ContactName, Address
 FROM Customers
 WHERE Address IS NULL;
 
+#   The SQL Update Statement
+The UPDATE statement is used to modify the existing records in a table.
+
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+Note: Be careful when updating records in a table! Notice the WHERE clause in the UPDATE statement. The WHERE clause specifies which record(s) that should be updated. If you omit the WHERE clause, all records in the table will be updated!
+
+UPDATE Table:
+The following SQL statement updates the first customer (CustomerID = 1) with a new contact person and a new city.
+
+
+UPDATE Customers
+SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+WHERE CustomerID = 1;
+
+UPDATE Multiple Records
+The following SQL statement will update the ContactName to "Juan" for all records where country is "Mexico":
+
+UPDATE Customers
+SET ContactName='Juan'
+WHERE Country='Mexico';
+
+Be careful when updating records. If you omit the WHERE clause, ALL records will be updated!
+
+
+
+#   The SQL DELETE Statement
+
+The following SQL statement deletes the customer "Alfreds Futterkiste" from the "Customers" table:
+
+DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+
+Delete All Records
+It is possible to delete all rows in a table without deleting the table. This means that the table structure, attributes, and indexes will be intact:
+
+DELETE FROM table_name;
+
 
 
 
