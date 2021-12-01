@@ -150,8 +150,30 @@ ORDER BY Country ASC, CustomerName DESC;
 #   The SQL INSERT INTO Statement
 
 INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
-VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');#^
 
+
+#   The SQL Null Statement
+
+A field with a NULL value is a field with no value.
+
+IS NULL Syntax:
+
+SELECT column_names
+FROM table_name
+WHERE column_name IS NULL;
+
+IS NOT NULL Syntax:
+
+SELECT column_names
+FROM table_name
+WHERE column_name IS NOT NULL;
+
+The following SQL lists all customers with a NULL value in the "Address" field:
+
+SELECT CustomerName, ContactName, Address
+FROM Customers
+WHERE Address IS NULL;
 
 
 
